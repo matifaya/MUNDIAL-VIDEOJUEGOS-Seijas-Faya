@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bt7duq6y6wuvg"]
+
+[ext_resource type="Script" uid="uid://cnekdp0ufsuv8" path="res://scripts/obstaculo.gd" id="1_kptk8"]
+[ext_resource type="Texture2D" uid="uid://c5njypumos3yx" path="res://assets/2d_race_cars/cars/pitstop_car_11.png" id="2_kptk8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obst"]
+size = Vector2(76, 34)
+
+[node name="Obstaculo" type="Area2D" unique_id=1416085849]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_kptk8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1190858926]
+position = Vector2(0.43120787, -1.6102688)
+rotation = -1.5611587
+scale = Vector2(0.09680221, 0.08586121)
+texture = ExtResource("2_kptk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1550484859]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_obst")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1320659459]
+rect = Rect2(-40, -20, 80, 38)

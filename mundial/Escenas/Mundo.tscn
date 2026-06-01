@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://d3y2lrq78va0b"]
+
+[ext_resource type="PackedScene" uid="uid://deuicanvas001" path="res://Escenas/UI.tscn" id="1_mund"]
+[ext_resource type="PackedScene" uid="uid://c8ma0uymfxt7k" path="res://Escenas/jugador.tscn" id="2_mund"]
+[ext_resource type="Script" uid="uid://b0v2t3jngtbqh" path="res://scripts/generador_obstaculos.gd" id="3_mund"]
+[ext_resource type="PackedScene" uid="uid://bvqfg30turv86" path="res://Escenas/autoRojo.tscn" id="4_5hai3"]
+[ext_resource type="Texture2D" uid="uid://bfklv8wqwdxku" path="res://assets/mapa.png" id="4_wxw8o"]
+[ext_resource type="PackedScene" uid="uid://bt7duq6y6wuvg" path="res://Escenas/autoAlt.tscn" id="5_kjdtq"]
+[ext_resource type="PackedScene" uid="uid://bysbigiu1cre1" path="res://Escenas/hicha.tscn" id="5_pcg50"]
+[ext_resource type="PackedScene" uid="uid://b45otxn5oplvc" path="res://Escenas/policia.tscn" id="6_kjdtq"]
+[ext_resource type="PackedScene" uid="uid://ctnoun1h5apoy" path="res://Escenas/vendedor.tscn" id="7_yg05w"]
+[ext_resource type="PackedScene" uid="uid://cqpgk6ptb2dx3" path="res://Escenas/jugadoresN.tscn" id="8_pcg50"]
+[ext_resource type="PackedScene" uid="uid://dpwo68m7amtok" path="res://Escenas/arbitro_final.tscn" id="11_yg05w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg05w"]
+size = Vector2(440.6667, 58.604176)
+
+[node name="Mundo" type="Sprite2D" unique_id=1855352793]
+position = Vector2(965.00006, -1367)
+scale = Vector2(3, 3)
+texture = ExtResource("4_wxw8o")
+metadata/_edit_horizontal_guides_ = [-4179.0, -4160.0]
+
+[node name="UI" parent="." unique_id=1162125803 instance=ExtResource("1_mund")]
+
+[node name="GeneradorObstaculos" type="Node2D" parent="." unique_id=364833564]
+position = Vector2(-370.6667, 135)
+script = ExtResource("3_mund")
+escenas_calle = Array[PackedScene]([ExtResource("4_5hai3"), ExtResource("5_kjdtq")])
+escenas_grada = Array[PackedScene]([ExtResource("5_pcg50"), ExtResource("6_kjdtq"), ExtResource("7_yg05w"), ExtResource("8_pcg50")])
+
+[node name="Jugador" parent="." unique_id=1531863849 instance=ExtResource("2_mund")]
+position = Vector2(4.333333, 907)
+
+[node name="arbitro_final" parent="." unique_id=637838919 groups=["puerta"] instance=ExtResource("11_yg05w")]
+position = Vector2(-7.000025, -834.3333)
+
+[node name="PuertaOculta" type="Area2D" parent="." unique_id=1335889839 groups=["puerta"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuertaOculta" unique_id=1899271074]
+position = Vector2(-1.3333435, -55.96875)
+shape = SubResource("RectangleShape2D_yg05w")
+
+[node name="PuertaOculta2" type="Area2D" parent="." unique_id=1141542158 groups=["puerta"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuertaOculta2" unique_id=817051710]
+position = Vector2(4.6666565, -498.3958)
+shape = SubResource("RectangleShape2D_yg05w")

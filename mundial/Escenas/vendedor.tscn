@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ctnoun1h5apoy"]
+
+[ext_resource type="Script" uid="uid://cnekdp0ufsuv8" path="res://scripts/obstaculo.gd" id="1_m7k2u"]
+[ext_resource type="Texture2D" uid="uid://bjlf2i84mk4rs" path="res://assets/assetsObstaculos.png" id="2_rnvob"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7k2u"]
+atlas = ExtResource("2_rnvob")
+region = Rect2(1400, 474, 200, 237)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20db1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7k2u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obst"]
+size = Vector2(25, 40)
+
+[node name="Obstaculo" type="Area2D" unique_id=1416085849]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_m7k2u")
+
+[node name="an" type="AnimatedSprite2D" parent="." unique_id=467838052]
+position = Vector2(-1.000001, 0.12499988)
+scale = Vector2(0.25333333, 0.28305784)
+sprite_frames = SubResource("SpriteFrames_20db1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1550484859]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_obst")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1320659459]
+rect = Rect2(-14, -22, 28, 44)

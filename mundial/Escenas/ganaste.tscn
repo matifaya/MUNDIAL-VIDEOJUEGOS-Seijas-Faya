@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b4nxdl7tvkmy7"]
+
+[ext_resource type="Texture2D" uid="uid://c73c7crhyfsyr" path="res://assets/ganasteInterfaz.png" id="1_cg1ci"]
+[ext_resource type="Script" uid="uid://bi8wkxunn5sb3" path="res://scripts/ganaste.gd" id="2_ganst"]
+
+[node name="Node2D" type="TextureRect" unique_id=164786753]
+anchors_preset = -1
+anchor_right = 1.3750001
+anchor_bottom = 1.1340001
+offset_left = -545.0
+offset_top = -156.0
+offset_right = -303.00024
+offset_bottom = -167.52002
+rotation = 0.004554026
+texture = ExtResource("1_cg1ci")
+script = ExtResource("2_ganst")
+
+[node name="BotonMenu" type="Button" parent="." unique_id=1197313444]
+layout_mode = 0
+offset_left = 1097.2347
+offset_top = 1147.015
+offset_right = 1884.5156
+offset_bottom = 1336.0886
+theme_override_font_sizes/font_size = 28

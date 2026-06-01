@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dpwo68m7amtok"]
+
+[ext_resource type="Texture2D" uid="uid://c0ou61khgc8nq" path="res://assets/arbitro.png" id="1_lw21e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3083f"]
+size = Vector2(33, 45)
+
+[node name="ArbitroFinal" type="Area2D" unique_id=637838919]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1142905852]
+position = Vector2(12, -4)
+shape = SubResource("RectangleShape2D_3083f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=547271178]
+position = Vector2(6.9999995, -3.9999995)
+scale = Vector2(0.07214605, 0.06894984)
+texture = ExtResource("1_lw21e")
+hframes = 4

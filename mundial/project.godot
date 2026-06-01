@@ -11,8 +11,19 @@ config_version=5
 [application]
 
 config/name="MUNDIAL"
+run/main_scene="res://Escenas/MenuPrincipal.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://scripts/GameManager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
 
 [physics]
 

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://demenuppal01"]
+
+[ext_resource type="Script" uid="uid://c4kpxdgo18dfm" path="res://scripts/menu_principal.gd" id="1_mnsc"]
+[ext_resource type="Texture2D" uid="uid://cx4ha3aswemke" path="res://assets/menuInicio.png" id="2_iq5l4"]
+
+[node name="MenuPrincipal" type="Control" unique_id=821983561]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -113.0
+offset_right = -4.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnsc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1666423509]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 108.0
+offset_right = 1932.0
+offset_bottom = 1416.0
+texture = ExtResource("2_iq5l4")
+
+[node name="BotonesPaises" type="HBoxContainer" parent="." unique_id=938471370]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 823.0
+offset_right = 1434.0
+offset_bottom = 983.57697
+scale = Vector2(1.12, 1.04)
+
+[node name="Argentina" type="Button" parent="BotonesPaises" unique_id=292056346]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="Brasil" type="Button" parent="BotonesPaises" unique_id=410276400]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="Japon" type="Button" parent="BotonesPaises" unique_id=1446792690]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="Inglaterra" type="Button" parent="BotonesPaises" unique_id=1202210349]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="Alemania" type="Button" parent="BotonesPaises" unique_id=1564076958]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="BotonJugar" type="Button" parent="." unique_id=1395066890]
+layout_mode = 0
+offset_left = 694.0
+offset_top = 997.0
+offset_right = 1194.0
+offset_bottom = 1117.0
+theme_override_font_sizes/font_size = 50
+text = "JUGAR"
